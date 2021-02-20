@@ -1,0 +1,216 @@
+######### essential linux commands"
+
+
+1. search for files :
+
+******** find ************
+find -name "filename" - search the current directory
+
+find / -name "filename" - search the entire file system.
+
+sudo find / -name "filename" - search with elevated permissions
+
+find will take time depending on the depth of the search and size of the file system 
+
+to make a case insenstive search 
+
+find / -iname "filename"
+
+locate "filename.txt"
+
+find has type option too 
+
+find / -type d -name "directory name"
+
+search for specific user 
+
+sudo find / -type f -user rkondepu
+
+***********locate***********
+
+locate 
+
+locate is quicker compared to find . but doesnt give you the fresh data as given by find command. the system by default runs the updatedb once a day. recent file additions or removals will 
+not be traced by locate .
+
+locate "filename"
+locate -i "filename"
+
+
+************** which/whereis/Type*********
+returns the location of a command based on the PATH Settings 
+to find the settings of the path 
+
+echo $PATH
+
+which commandname
+
+
+: [0248] ssn@sanssnpr01nag12:~ $ ; echo $PATH
+/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lib/oracle/11.2/client64/bin
+
+
+
+whereis - returns the location of binary, source file and man pages . it will return if multiple pages exist 
+
+: [0255] ssn@sanssnpr01nag12:~ $ ; whereis python
+python: /usr/bin/python2.6 /usr/bin/python2.7 /usr/bin/python /usr/bin/python2.7-config /usr/lib/python2.6 /usr/lib/python2.7 /usr/lib64/python2.7 /etc/python /usr/include/python2.7 /usr/share/man/man1/python.1.gz
+: [NAGIOS] ;
+: [0255] ssn@sanssnpr01nag12:~ $ ; whereis python | tr " " '\n'
+python:
+/usr/bin/python2.6
+/usr/bin/python2.7
+/usr/bin/python
+/usr/bin/python2.7-config
+/usr/lib/python2.6
+/usr/lib/python2.7
+/usr/lib64/python2.7
+/etc/python
+/usr/include/python2.7
+/usr/share/man/man1/python.1.gz
+
+
+type commandname
+
+type ls 
+
+ls is aliased to 'ls --color=auto'
+
+
+type -a ls
+
+ls is aliased to 'ls --color=auto'
+
+ls is /bin/ls
+
+
+ 
+Journaling in os:
+
+os maintains a seperate log whenever you are adding data and incase of any power failure , the os will look into the journal and continue the work .
+
+
+
+***************cat, more, less, sort, touch, nano************************
+
+ cat /usr/ssn/splunkforwarder/etc/apps/ssn/local/inputs.conf |more
+
+more filename 
+
+displays one page at a time 
+
+less filename
+
+scroll down option, search option 
+
+sort filename
+
+sort -r filename
+
+sort filename >> newfilename (put contents in another file)
+
+
+touch filename (creating a new file) or update the access and modification time
+
+
+nano filename 
+
+
+**************diff,cmp,comm*******************
+
+: [0348] rkondepu@sanssnpr01ada02:playbook $ ; diff first.yml test1.yml
+1,3c1,4
+< ---
+< - hosts: all
+<   gather_facts: false
+---
+> ---
+>
+> - name: Appending text intp text file
+>   hosts: test_nagios
+5c6,14
+<     - ping:
+---
+>     - name: append text
+>       lineinfile:
+>         dest: /home/rkondepu/test.txt
+>         line: " Hello Ranjini"
+>         state: present
+>         insertafter: EOF
+>       become: True
+>       become_user: root
+>       register: found
+: [] ;
+
+: [0348] rkondepu@sanssnpr01ada02:playbook $ ; diff -c first.yml test1.yml
+*** first.yml   2020-11-02 17:21:04.713107830 +0000
+--- test1.yml   2021-02-20 03:46:10.104482325 +0000
+***************
+*** 1,5 ****
+! ---
+! - hosts: all
+!   gather_facts: false
+    tasks:
+!     - ping:
+--- 1,14 ----
+! ---
+!
+! - name: Appending text intp text file
+!   hosts: test_nagios
+    tasks:
+!     - name: append text
+!       lineinfile:
+!         dest: /home/rkondepu/test.txt
+!         line: " Hello Ranjini"
+!         state: present
+!         insertafter: EOF
+!       become: True
+!       become_user: root
+!       register: found
+
+
+: [0356] ssn@sanssnpr01nag12:ssn $ ; ls
+bkup  certs  home  lost+found  omd  splunkforwarder  system  titan  titan-dev  titan-git  titan-python
+: [NAGIOS] ;
+: [0356] ssn@sanssnpr01nag12:ssn $ ; diff titan-dev titan
+Only in titan: attribmap.json
+Only in titan: bin
+Only in titan: certs
+Only in titan-dev: changepasswd.sh
+Only in titan-dev: daily.sh
+Only in titan-dev: db_copy.sh
+Only in titan-dev: db_restore.sh
+Only in titan-dev: emmodels.txt
+Only in titan-dev: importcsv.sh
+Only in titan-dev: importroutermap.sh
+Only in titan-dev: jobinit.sh
+Only in titan-dev: jobs.sh
+Only in titan-dev: log
+Only in titan: logs
+Only in titan-dev: manage.py
+Only in titan-dev: migrate.sh
+Only in titan: migrations
+Only in titan-dev: nan-monitoring
+Only in titan-dev: prod_dr_macro_sync.py
+Only in titan-dev: refresh.sh
+Only in titan-dev: reload.py
+Only in titan-dev: requirements
+Only in titan-dev: rotatelog.sh
+Only in titan-dev: runjob.sh
+Only in titan-dev: runwebserver.sh
+Only in titan: servicemap.json
+Only in titan-dev: ssnemmodels.py
+Only in titan-dev: test
+Only in titan-dev: titan
+Only in titan-dev: titan.db
+Only in titan-dev: update_maprouter.py
+
+: [0358] rkondepu@sanssnpr01ada02:playbook $ ; cmp  first.yml test1.yml
+first.yml test1.yml differ: byte 4, line 1
+
+
+
+
+
+
+
