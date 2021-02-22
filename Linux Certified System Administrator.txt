@@ -1,0 +1,199 @@
+Essential Commands
+Search for Files Part 1 - Find/Locate
+00:09:32
+Search for Files Part 2 - Which/Whereis/Type
+00:04:42
+Evaluate and Compare the Basic File System Features and Options
+00:07:40
+Compare and Manipulate File Content and Use Input-Output Redirection Part 1 - Create Files/Input-Output
+00:09:38
+Compare and Manipulate File Content and Use Input-Output Redirection Part 2 - Compare Files (Diff/Compare/CMP)
+00:09:15
+Use Input-Output Redirection (e.g. >, >>, |, 2>)
+00:08:20
+Analyze Text Using Basic Regular Expressions
+00:08:49
+Archive, Backup, Compress, Unpack, and Decompress Files
+00:07:12
+Create, Delete, Copy, and Move Files and Directories
+00:07:55
+Create and Manage Hard and Soft Links
+00:08:12
+List, Set, and Change Standard File Permissions
+00:08:55
+Manage Access to the root Account
+00:08:23
+Read and Use System Documentation
+00:04:10
+Hands-On Lab:
+Archiving Files and Directories with Compression
+00:15:00
+Hands-On Lab:
+Using File Attributes and Permissions
+00:15:00
+Hands-On Lab:
+Finding Files, and Assigning Permissions and Ownership
+00:15:00
+Hands-On Lab:
+Transfer Files Securely Over the Network
+00:15:00
+Operation of Running Systems
+Boot, Reboot, and Shut Down a System Safely
+00:05:30
+Boot or Change System into Different Operating Modes
+00:04:50
+Install, Configure, and Troubleshoot Boot-Loaders
+00:05:27
+Diagnose and Manage Processes
+00:08:39
+Locate and Analyze System Log Files
+00:05:38
+Schedule Tasks to Run at a Set Date and Time
+00:07:53
+Verify Completion of Scheduled Jobs
+00:04:14
+Update and Manage Software to Provide Required Functionality and Security, Part 1 - Ubuntu/Debian
+00:08:47
+Update and Manage Software to Provide Required Functionality and Security, Part 2 - CentOS/Redhat
+00:08:57
+Verify the Integrity and Availability of Resources
+00:05:01
+Verify the Integrity and Availability of Key Processes
+00:09:15
+Change Kernel Runtime Parameters, Persistent and Non-Persistent
+00:06:24
+Use Scripting to Automate System Maintenance Tasks
+00:04:40
+Scripting Conditionals and Loops Part 1 - Operators/If
+00:06:52
+Scripting Conditionals and Loops Part 2 - For/While/Until
+00:05:26
+Manage the Startup Process and Services (In Services Configuration)
+00:05:01
+List and Identify SELinux/AppArmor File and Process Contexts
+00:08:53
+Hands-On Lab:
+Managing Packages on Debian and Ubuntu Systems
+00:15:00
+Hands-On Lab:
+Managing Packages on RedHat/CentOS Systems
+00:30:00
+Hands-On Lab:
+Using a Oneshot Systemd Service
+00:15:00
+Hands-On Lab:
+Creating a Cronjob to Run a Script Periodically
+00:15:00
+User and Group Management
+Create, Delete, and Modify Local User Accounts
+00:09:51
+Create, Delete, and Modify Local Groups and Group Memberships
+00:08:30
+Manage System-Wide Environment Profiles
+00:07:05
+Manage Template User Environment
+00:04:24
+Configure User Resource Limits
+00:05:04
+Manage User Privileges
+00:05:48
+Configure PAM
+00:07:44
+Hands-On Lab:
+Managing User and Group Accounts
+00:30:00
+Hands-On Lab:
+Enabling su/sudo Access with Wheel Group
+00:30:00
+Networking
+Configure Networking and Hostname Resolution Statically or Dynamically
+00:09:58
+Configure Network Services to Start Automatically at Boot
+00:03:42
+Implement Packet Filtering
+00:05:30
+Start, Stop, and Check the Status of Network Services
+00:05:38
+Statically Route IP Traffic
+00:07:10
+Synchronize Time Using Other Network Peers
+00:04:40
+Hands-On Lab:
+Adding an IP Address and a Static Route
+00:30:00
+Hands-On Lab:
+Synchronizing Time with NTP
+00:15:00
+Service Configuration
+Configure a Caching DNS Server
+00:05:39
+Maintain a DNS Zone
+00:09:25
+Configure Email Aliases
+00:05:27
+Configure SSH Servers and Clients
+00:07:13
+Restrict Access to HTTP Proxy Servers
+00:04:37
+Configure an IMAP and IMAPS Service (and Pop3 and Pop3S)
+00:06:03
+Query and Modify the Behavior of System Services at Various Operating Modes
+00:06:25
+Configure an HTTP Server (Ubuntu/Debian)
+00:06:08
+Configure HTTP Server Log Files
+00:05:28
+Restrict Access to a Web Page
+00:07:00
+Configure a Database Server
+00:05:40
+Manage and Configure Containers
+00:07:16
+Manage and Configure Virtual Machines
+00:06:57
+Hands-On Lab:
+Using SSH Keys for Secure Access
+00:15:00
+Hands-On Lab:
+Managing Docker Containers
+00:30:00
+Hands-On Lab:
+Configuring Outgoing Mail Server
+00:15:00
+Hands-On Lab:
+Securing the MariaDB Database Server
+00:30:00
+Hands-On Lab:
+Deploying Apache Web Server on RedHat/CentOS
+00:30:00
+Storage Management
+List, Create, Delete, and Modify Physical Storage Partitions
+00:07:59
+Manage and Configure LVM Storage Part 1 - Create LVM
+00:06:13
+Manage and Configure LVM Storage Part 2 - Extend LVM
+00:08:30
+Create and Configure Encrypted Storage
+00:06:29
+Configure Systems to Mount File Systems at or During Boot
+00:05:06
+Configure and Manage Swap Space
+00:07:29
+Create and Manage RAID Devices
+00:09:11
+Configure Systems to Mount File Systems on Demand
+00:06:05
+Create, Manage, and Diagnose Advanced File System Permissions
+00:08:42
+Set up User and Group Disk Quotas for File Systems
+00:07:33
+Create and Configure File Systems
+00:07:01
+Hands-On Lab:
+Creating and Mounting an Encrypted Filesystem
+00:30:00
+Hands-On Lab:
+Working with Logical Volume Management
+00:30:00
+Hands-On Lab:
+Managing Swap Files and Partitions
