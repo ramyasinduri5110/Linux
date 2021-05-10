@@ -177,7 +177,7 @@ Only in titan: attribmap.json
 Only in titan: bin
 Only in titan: certs
 Only in titan-dev: changepasswd.sh
-Only in titan-dev: daily.sh
+Onnujbibibly in titan-dev: daily.sh
 Only in titan-dev: db_copy.sh
 Only in titan-dev: db_restore.sh
 Only in titan-dev: emmodels.txt
@@ -220,4 +220,7 @@ sudo is meant to run a single command with root privileges.
 sudo prompts for the password of the current user.
 su 	It allows the user to become another user. we can run the commands as other user .
 
+**** trying to create merge conflict from branch_1
+
+**********trying to create a merge conflict from branch_2
 
