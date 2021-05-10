@@ -220,4 +220,4 @@ sudo is meant to run a single command with root privileges.
 sudo prompts for the password of the current user.
 su 	It allows the user to become another user. we can run the commands as other user .
 
-
+******** branch2 commit
